@@ -1,0 +1,35 @@
+# ---- 依赖 / Dependencies ----
+node_modules/
+frontend/node_modules/
+
+# ---- 构建产物 / Build output ----
+dist/
+build/
+frontend/dist/
+*.tsbuildinfo
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 虚拟环境 / 环境 / Env & secrets ----
+.env
+.env.*
+*.local
+
+# ---- 日志 / Logs ----
+*.log
+logs/
+
+# ---- 编辑器 / IDE & OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

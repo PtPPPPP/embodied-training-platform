@@ -1,0 +1,263 @@
+:root {
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  color: #15202b;
+  background: #f4f7f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 6px;
+  background: #146c64;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+button:hover {
+  background: #0f5a53;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid #cbd8d5;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: white;
+}
+
+.app-shell {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.topbar h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.topbar p {
+  margin: 0;
+  color: #566a67;
+}
+
+.secondary-button {
+  background: #50646b;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.left-column,
+.right-column {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #dce5e2;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 8px 12px;
+}
+
+.status-grid span {
+  color: #6d7d7a;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 44px 1fr 42px;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.control-grid button:first-child,
+.control-grid button:last-child {
+  grid-column: 1 / -1;
+}
+
+.stop-button {
+  background: #b83232;
+}
+
+.two-column-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.point-fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  border: 1px solid #dce5e2;
+  border-radius: 6px;
+  margin: 0;
+  padding: 8px;
+}
+
+.point-fieldset label {
+  display: grid;
+  gap: 4px;
+  color: #5b6f6c;
+}
+
+.command-row {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 8px;
+}
+
+.result-text {
+  margin: 10px 0 0;
+  color: #146c64;
+  font-weight: 700;
+}
+
+.map-panel {
+  min-height: 520px;
+}
+
+.map-grid {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+}
+
+.map-cell {
+  aspect-ratio: 1;
+  border: 1px solid #d9e2df;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  background: #f9fbfa;
+  color: #10201e;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.obstacle-cell {
+  background: #46545a;
+}
+
+.path-cell {
+  background: #d7efea;
+  border-color: #8bc7bd;
+}
+
+.object-cell.red {
+  background: #ef6b5c;
+  color: white;
+}
+
+.object-cell.blue {
+  background: #4d7fd9;
+  color: white;
+}
+
+.robot-cell {
+  background: #f6c445;
+  border-color: #b98213;
+  color: #3f2b00;
+}
+
+.log-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #435452;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.log-list li + li {
+  margin-top: 6px;
+}
+
+.error-banner {
+  margin-bottom: 14px;
+  border: 1px solid #d89a9a;
+  background: #fff0f0;
+  color: #8b1e1e;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.empty {
+  color: #6d7d7a;
+}
+
+@media (max-width: 980px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .two-column-form,
+  .command-row {
+    grid-template-columns: 1fr;
+  }
+}
